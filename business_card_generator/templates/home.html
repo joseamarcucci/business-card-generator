@@ -17,37 +17,11 @@
           <hr>
 
           <form method="GET" action="{{ url_for('views.get_card') }}">
-            <div class="field is-horizontal">
-              <div class="field-label">
-                <label class="label">Card Type</label>
-              </div>
-              <div class="field-body">
-                <div class="control">
-                  <label class="radio">
-                    <input
-                      type="radio"
-                      name="card_type"
-                      value="vcard"
-                      {%- if not request.args.card_type or request.args.card_type == 'vcard' %} checked{% endif %}
-                    >
-                    vCard
-                  </label>
-                  <label class="radio">
-                    <input
-                      type="radio"
-                      name="card_type"
-                      value="mecard"
-                      {%- if request.args.card_type == 'mecard' %} checked{% endif %}
-                    >
-                    MeCard
-                  </label>
-                </div>
-              </div>
-            </div>
+
 
             <div class="field is-horizontal">
               <div class="field-label is-normal">
-                <label class="label">Profile</label>
+                <label class="label">Perfil Laboral</label>
               </div>
               <div class="field-body">
                 <div class="field">
@@ -55,7 +29,7 @@
                     <input
                       class="input"
                       type="text"
-                      placeholder="First Name"
+                      placeholder="Nombre"
                       name="firstname"
                       value="{{ request.args.firstname }}"
                       required
@@ -71,7 +45,7 @@
                     <input
                       class="input"
                       type="text"
-                      placeholder="Last Name"
+                      placeholder="Apellido"
                       name="lastname"
                       value="{{ request.args.lastname }}"
                       required
